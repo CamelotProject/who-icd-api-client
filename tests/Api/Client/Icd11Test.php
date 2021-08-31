@@ -111,12 +111,10 @@ final class Icd11Test extends TestCase
 
     public function testGetReleaseLinearizationByIdResidual(): void
     {
-        static::markTestIncomplete();
+        $result = $this->getClient()->getReleaseLinearizationByIdResidual('2019-04', 'mms', '135352227', 'other');
+        $expected = 'Other specified bacterial intestinal infections';
 
-        $result = $this->getClient()->getReleaseLinearizationByIdResidual('2019-04', 'mms', '21500692', 'other');
-        $expected = '';
-
-        static::assertSame($expected, $result);
+        static::assertSame($expected, $result['title']['@value']);
     }
 
     public function testGetReleaseLinearizationById(): void
@@ -129,12 +127,10 @@ final class Icd11Test extends TestCase
 
     public function testGetLinearizationByIdResidual(): void
     {
-        static::markTestIncomplete();
+        $result = $this->getClient()->getLinearizationByIdResidual('mms', '135352227', 'other');
+        $expected = 'Other specified bacterial intestinal infections';
 
-        $result = $this->getClient()->getLinearizationByIdResidual('mms', '21500692', 'other');
-        $expected = '';
-
-        static::assertSame($expected, $result);
+        static::assertSame($expected, $result['title']['@value']);
     }
 
     public function testGetReleaseLinearizationByCode(): void
