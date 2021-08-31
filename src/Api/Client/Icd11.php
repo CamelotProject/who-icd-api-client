@@ -162,7 +162,7 @@ final class Icd11
      */
     public function getReleaseLinearizationLookup(string $releaseId, string $linearizationName = null, string $foundationUri = null): array
     {
-        $q = $linearizationName ? '?foundationUri=' . urlencode($linearizationName) : '';
+        $q = $foundationUri ? '?foundationUri=' . urlencode($foundationUri) : '';
 
         return $this->getClient()->request('GET', "{$releaseId}/{$linearizationName}/lookup{$q}")->toArray();
     }
