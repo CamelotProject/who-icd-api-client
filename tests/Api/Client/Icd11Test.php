@@ -19,8 +19,8 @@ final class Icd11Test extends TestCase
 {
     public function providerFoundations(): iterable
     {
-        yield 'Null' => ['2021-05', null];
-        yield 'Empty string' => ['2021-05', ''];
+        yield 'Null' => ['2022-02', null];
+        yield 'Empty string' => ['2022-02', ''];
         yield '2019-04' => ['2019-04', '2019-04'];
         yield '2021-05' => ['2021-05', '2021-05'];
     }
