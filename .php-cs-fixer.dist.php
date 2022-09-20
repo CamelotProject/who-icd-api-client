@@ -7,7 +7,7 @@ return Camelot\CsFixer\Config::create()
         Camelot\CsFixer\Rules::create()
             ->risky()
             ->php73()
-            ->phpUnit75()
+            ->phpUnit84()
     )
     ->addRules([
         '@PhpCsFixer:risky' => true,

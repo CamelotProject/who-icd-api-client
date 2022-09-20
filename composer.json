@@ -15,6 +15,7 @@
         "symfony/http-client": "^5.4 || ^6.0"
     },
     "require-dev": {
+        "ext-json": "*",
         "camelot/coding-style": "^3.0",
         "symfony/phpunit-bridge": "^5.4 || ^6.0",
         "friendsofphp/php-cs-fixer": "^3.11",
